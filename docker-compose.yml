@@ -1,0 +1,14 @@
+services:
+
+ apihistoricos:
+   build:
+     context: .
+     dockerfile: Dockerfile
+   ports:
+     - "8085:8085"
+   networks:
+     - app-network
+
+networks:
+ app-network:
+   external: true
